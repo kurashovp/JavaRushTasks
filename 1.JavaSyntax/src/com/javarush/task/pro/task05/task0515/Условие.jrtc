@@ -1,0 +1,11 @@
+taskKey="com.javarush.task.pro.task05.task0515"\n\nСравнение двумерных массивов
+
+Исправь работу метода main(String[]), который выводит в консоль true если arrayFirst равняется arraySecond,
+иначе false.
+
+
+Требования:
+1.	Если arrayFirst равняется arraySecond, то метод main(String[]) выводит в консоль true.
+2.	Если arrayFirst не равняется arraySecond, то метод main(String[]) выводит в консоль false.
+
+

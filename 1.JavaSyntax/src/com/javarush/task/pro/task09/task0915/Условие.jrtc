@@ -1,0 +1,14 @@
+taskKey="com.javarush.task.pro.task09.task0915"\n\nStringTokenizer
+
+Используя StringTokenizer раздели query на части по разделителю delimiter.
+Пример:
+getTokens("com.javarush.task.pro.task09.task0915", ".a")
+возвращает массив строк
+{"com", "j", "v", "rush", "t", "sk", "pro", "t", "sk09", "t", "sk0915"}
+
+
+Требования:
+1.	Нужно, чтобы метод getTokens(String, String) использовал StringTokenizer.
+2.	Нужно, чтобы метод getTokens(String, String) возвращал массив типа String, заполненный согласно условию задачи.
+
+

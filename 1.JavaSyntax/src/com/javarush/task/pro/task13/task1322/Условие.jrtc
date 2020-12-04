@@ -1,0 +1,11 @@
+taskKey="com.javarush.task.pro.task13.task1322"\n\nТипы многоугольников
+
+В классе Solution есть метод getShapeNameByCountOfCorners(int), который возвращает название многоугольника в зависимости от количества углов.
+Твоя задача — переписать метод, используя только switch-expression.
+
+
+Требования:
+1.	Результат работы метода getTranslationForDayOfWeek(int) не должен измениться.
+2.	В методе getTranslationForDayOfWeek(int) должен использоваться только switch-expression.
+
+

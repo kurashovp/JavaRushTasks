@@ -1,0 +1,15 @@
+taskKey="com.javarush.games.minigames.mini01"\n\nСоздаем главный класс игры
+
+Чтобы запустить игру, создай класс com.javarush.games.minigames.mini01.FirstGame и унаследуй его от класса Game. Также переопредели
+метод "игрового движка" - initialize(). Попробуй запустить на выполнение класс com.javarush.games.minigames.mini01.FirstGame и
+посмотри, что получилось.
+
+
+Требования:
+1.	Должен быть создан класс com.javarush.games.minigames.mini01.FirstGame.
+2.	Класс com.javarush.games.minigames.mini01.FirstGame должен быть публичным.
+3.	Класс com.javarush.games.minigames.mini01.FirstGame должен быть наследником класса Game.
+4.	В классе com.javarush.games.minigames.mini01.FirstGame должен быть переопределен метод initialize() родительского класса Game.
+5.	В классе com.javarush.games.minigames.mini01.FirstGame должен быть импорт пакета com.javarush.engine.cell.Game
+
+
