@@ -26,6 +26,21 @@ public class Solution {
             somePerson.load(inputStream);
             //check here that ivanov equals to somePerson - проверьте тут, что ivanov и somePerson равны
             System.out.println(ivanov.equals(somePerson));
+            System.out.println("ivanov.assets.equals(somePerson.assets) = " + ivanov.assets.equals(somePerson.assets));
+            System.out.println("somePerson.name = " + somePerson.name);
+            if (somePerson.assets.size() > 0) {
+                for (Asset current : somePerson.assets) {
+                    System.out.println(current.getName());
+                    System.out.println(current.getPrice());
+                }
+            }
+            System.out.println("ivanov.name = " + ivanov.name);
+            if (ivanov.assets.size() > 0) {
+                for (Asset current : ivanov.assets) {
+                    System.out.println(current.getName());
+                    System.out.println(current.getPrice());
+                }
+            }
             inputStream.close();
 
         } catch (IOException e) {
