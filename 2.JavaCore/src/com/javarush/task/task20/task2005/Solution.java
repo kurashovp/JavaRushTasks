@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 /* 
 Очень странные дела
@@ -13,7 +14,7 @@ public class Solution {
     public static void main(String[] args) {
         //исправь outputStream/inputStream в соответствии с путем к твоему реальному файлу
         try {
-            File your_file_name = File.createTempFile("your_file_name", null);
+            File your_file_name = File.createTempFile("task2005", null);
             OutputStream outputStream = new FileOutputStream(your_file_name);
             InputStream inputStream = new FileInputStream(your_file_name);
 
@@ -42,21 +43,15 @@ public class Solution {
 
         @Override
         public boolean equals(Object o) {
-            if (this == o) return false;
+            if (this == o) return true;
             if (o == null || getClass() != o.getClass()) return false;
-
             Human human = (Human) o;
-
-            if (name == null ? !name.equals(human.name) : human.name != null) return false;
-            return assets != null ? assets.equals(human.assets) : human.assets == null;
-
+            return name.equals(human.name) && assets.equals(human.assets);
         }
 
         @Override
         public int hashCode() {
-            int result = name != null ? name.hashCode() : 0;
-            result = 31 * result + (assets != null ? assets.hashCode() : 0);
-            return (int) (Math.random() * 100);
+            return Objects.hash(name, assets);
         }
 
         public Human() {
@@ -74,8 +69,10 @@ public class Solution {
             PrintWriter printWriter = new PrintWriter(outputStream);
             printWriter.println(this.name);
             if (this.assets.size() > 0) {
-                for (Asset current : this.assets)
+                for (Asset current : this.assets) {
                     printWriter.println(current.getName());
+                    printWriter.println(current.getPrice());
+                }
             }
             printWriter.close();
         }
@@ -86,8 +83,13 @@ public class Solution {
 
             this.name = reader.readLine();
             String assetName;
-            while ((assetName = reader.readLine()) != null)
-                this.assets.add(new Asset(assetName));
+            String price;
+            while ((assetName = reader.readLine()) != null &&
+                    (price = reader.readLine()) != null) {
+                Asset asset = new Asset(assetName);
+                asset.setPrice(Double.parseDouble(price));
+                this.assets.add(asset);
+            }
             reader.close();
         }
     }
