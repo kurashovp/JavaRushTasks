@@ -16,7 +16,7 @@ public class Solution {
                 {'m', 'l', 'p', 'r', 'r', 'h'},
                 {'p', 'o', 'e', 'e', 'j', 'j'}
         };
-        detectAllWords(crossword, "home", "same"); // .forEach(System.out::println);
+        detectAllWords(crossword, "home", "same").forEach(System.out::println);
         /*
 Ожидаемый результат
 home - (5, 3) - (2, 0)
